@@ -34,8 +34,6 @@ if psw== bad_passwords :
 else:
     print("password set")
 
-#5) don't know
-
 #6)
 print("Multiplication table of 7 :")
 for i in range(13):
