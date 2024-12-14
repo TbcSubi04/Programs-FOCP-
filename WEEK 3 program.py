@@ -15,16 +15,21 @@ if psw1!= psw2:
     print("Error occured")
 
 #3)
-#psw=str(input("Enter the password :"))
-#if len(psw)>=8 and (psw)<=12 :
- #   print("Password set")
-#else:
- #   print("Password not set according to the instructions")
+psw = input("Enter the password: ")
+if len(psw)<8 or len(psw)>12:
+    print("Password must be between 8 to 12 characters long.")
+else:
+    check_psw = input("Confirm the password: ")
+
+    if psw == check_psw:
+        print("Password Set")
+    else:
+        print("Sorry! The password did not match")
 
 #4)list psw
 bad_passwords= ['password', 'letmein', 'sesame', 'hello', 'justinbieber']
-psw=input("Enter a password")
-if psw in bad_passwords :
+psw=input("Enter a password :")
+if psw== bad_passwords :
     print("The given password could not be set")
 else:
     print("password set")
@@ -46,8 +51,13 @@ else:
     print("number not within the range")
 
 #8)backword table
-num=int(input("Enter a number :"))
-print("The multiplication table of",num)
-if num<=0 and num<=12 :
+number=int(input("Enter the number :"))
+print("The multiplication table of",number)
+if number>=0 and number<=12 :
+    for i in range(11):
+        print(number,"*",i,"=",number*i)
+elif number<=0 and number<=12 :
     for i in range(12,1,-1):
-        print(num,"*",i,"=",num*i)
+        print(number,"*",i,"=",number*i)
+else:
+    print("number not within the range")

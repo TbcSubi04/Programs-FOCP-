@@ -1,6 +1,6 @@
 #1)greeting
 name=str(input("Hello,what is your name :"))
-print("Hello,","Mr",name,"Good to meet you!")
+print("Hello",name,"Good to meet you!")
 
 
 #2)temperature
@@ -20,7 +20,3 @@ sweets=int(input("Enter how many sweets :"))
 distribute=sweets/count
 print(f"Each pupil will get {distribute} sweets")
 
-#2)temperature
-Fahren=float(input("Enter the temperature in Celsius :"))
-temp=(Fahren*(9/5))+32
-print(f"{Fahren}C is equivalent to {temp}F")
