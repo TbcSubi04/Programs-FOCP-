@@ -1,4 +1,5 @@
-#1)
+#question number 1 
+
 name=str(input("Enter your name :"))
 if name== "" :
     print('"Hello,Stranger!"')
@@ -6,7 +7,8 @@ else:
     print("Hello,",name,"Good to meet you!")
 
 
-#2)
+#question number 2
+
 psw1=(input("Enter the password : "))
 psw2=(input("Enter the password again : "))
 if psw1==psw2:
@@ -14,7 +16,8 @@ if psw1==psw2:
 if psw1!= psw2:
     print("Error occured")
 
-#3)
+#question number 3
+
 psw = input("Enter the password: ")
 if len(psw)<8 or len(psw)>12:
     print("Password must be between 8 to 12 characters long.")
@@ -26,7 +29,8 @@ else:
     else:
         print("Sorry! The password did not match")
 
-#4)list psw
+#question number 4
+
 bad_passwords= ['password', 'letmein', 'sesame', 'hello', 'justinbieber']
 psw=input("Enter a password :")
 if psw== bad_passwords :
@@ -34,12 +38,14 @@ if psw== bad_passwords :
 else:
     print("password set")
 
-#6)
+#question number 6
+
 print("Multiplication table of 7 :")
 for i in range(13):
     print(7,"*",i,"=",7*i)
 
-#7)
+#question number 7
+
 number=int(input("Enter the number :"))
 print("The multiplication table of",number)
 if number>=0 and number<=12 :
@@ -48,7 +54,8 @@ if number>=0 and number<=12 :
 else:
     print("number not within the range")
 
-#8)backword table
+#question number 8
+
 number=int(input("Enter the number :"))
 print("The multiplication table of",number)
 if number>=0 and number<=12 :

@@ -31,6 +31,7 @@ print(f"String: '{string_check}'")
 print(f"Uppercase letters: {Upcase}, Lowercase letters: {lowcase}\n")
 
 #question number 3
+
 name=input("Hello,what is your name :")
 greetings=name.capitalize()
 print(f"Hello,{greetings}")
@@ -47,6 +48,7 @@ modified_string= last_character(remove_last_char)
 print(f"{remove_last_char} modified : {modified_string}")
 
 #question number 5
+
 def cels_to_fahren(celsius):
     Fahrenheit= celsius*(9/5) +32
     return Fahrenheit
@@ -115,6 +117,40 @@ else:
         
 
 #question number 8
+
+def cels_to_fahren(celsius):
+    return celsius * (9/5) + 32
+
+def degrees():
+    temperatures = []  
+    
+    while True:
+        temp = input("Enter temperature in Celsius (e.g., 25C) or press Enter to stop: ")
+        if temp == "":
+            break
+        
+        if temp[-1].upper() == 'C' and temp[:-1]:
+            # Extract the numeric part and convert to float
+            celsius = float(temp[:-1])
+            
+            fahrenheit = cels_to_fahren(celsius)
+            temperatures.append(fahrenheit)
+        else:
+            print("Invalid input. Please enter the temperature in the format 'XXC'.")
+ 
+    if temperatures:
+        max_temp = max(temperatures)
+        min_temp = min(temperatures)
+        mean_temp = sum(temperatures) / len(temperatures)
+
+        print(f"Maximum Temperature: {max_temp:.2f}F")
+        print(f"Minimum Temperature: {min_temp:.2f}F")
+        print(f"Mean Temperature: {mean_temp:.2f}F")
+    else:
+        print("No valid temperatures were entered.")
+
+if __name__ == "__main__":
+    degrees()
 
     
 
