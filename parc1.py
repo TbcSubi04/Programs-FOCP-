@@ -1,16 +1,10 @@
-def letter_analysis(sentence):
-    letter_counting = []
+countries_with_capitals={'Nepal':'Kathmandu','Korea':'Seoul','China':'Beijing','Japan':'Tokyo','France':'Paris'}
 
-    for char in word:
-        if 'a' <= char <= 'z':
-            letter_counting[char] =letter_counting(char, 0) + 1
-
-    sorted_letters = sorted(letter_count.items(), key=lambda item: item[1], reverse=True)
-
-    for letter, count in sorted_letters[:6]:
-        print(f"{letter}: {count} times")
+country=input("Enter the country you want to know the capital about : ")
+if country in countries_with_capitals:
+    print(f"The capital of {country} is: {countries_with_capitals[country]}")
+else:
+    print("Sorry, the capital for the country is not stored.")
 
 
-message = "Hello , how are you? Hope you're doing well!"
 
-frequency_analysis(message)

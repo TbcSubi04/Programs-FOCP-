@@ -28,14 +28,29 @@ print(f"Letter that appear in either word,but not in both{para1,para2}")
 #question number 3
 
 countries_with_capitals={'Nepal':'Kathmandu','Korea':'Seoul','China':'Beijing','Japan':'Tokyo','France':'Paris'}
-countries=input("Enter the country you want to know the capital about : ")
-for key,values in countries_with_capitals():
-    if countries in countries_with_capitals:
-        print(f"The capital of {key} is : {values}")
-    else:
-        print("Sorry the capital for the country is not stored.")
-    
+
+country=input("Enter the country you want to know the capital about : ")
+if country in countries_with_capitals:
+    print(f"The capital of {country} is: {countries_with_capitals[country]}")
+else:
+    print("Sorry, the capital for the country is not stored.")
+
 
 #question number 4
+def letter_analysis(message):
+    count_letters = {}
 
+    for char in message.lower():
+        if 'a' <= char <= 'z':
+            count_letters[char] = count_letters(char, 0) + 1
+
+    sorted_letters = sorted(count_letters, key=lambda item: item[1], reverse=True)
+
+    for letter, count in sorted_letters[:6]:
+        print(f"{letter}: {count} times")
+
+
+message = "Hello, I hope you have a great day ahead"
+
+letter_analysis(message)
     
