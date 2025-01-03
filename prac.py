@@ -50,3 +50,5 @@ if temperatures:
 else: 
     print("Valid temperatures were not entered")
         
+
+        

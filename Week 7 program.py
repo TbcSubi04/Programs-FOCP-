@@ -37,20 +37,19 @@ else:
 
 
 #question number 4
-def letter_analysis(message):
-    count_letters = {}
+def letter_counting(message):
+    letter_count = {}
 
     for char in message.lower():
         if 'a' <= char <= 'z':
-            count_letters[char] = count_letters(char, 0) + 1
+            letter_count[char] = letter_count.get(char, 0) + 1
 
-    sorted_letters = sorted(count_letters, key=lambda item: item[1], reverse=True)
+    sorted_letters = sorted(letter_count.items(), key=lambda item: item[1], reverse=True)
 
     for letter, count in sorted_letters[:6]:
         print(f"{letter}: {count} times")
 
 
-message = "Hello, I hope you have a great day ahead"
+message = "Wishing you a prosperous life !"
 
-letter_analysis(message)
-    
+letter_counting(message)
